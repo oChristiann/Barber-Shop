@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/css/login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title> Projeto Christian </title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo"><a href="/index.html" style="color:orangered">BarberShop<ion-icon name="cut-outline" style="color:rgb(64, 75, 121)"></ion-icon></a></div>
+        <ul class="links">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/view/sobre.html">Sobre</a></li>
+          <li><a href="/view/services.html">Serviços</a></li>
+          <li><a href="/view/contact.html">Contato</a></li>
+        </ul>
+
+        <a href="#" class="btn-popup">Login</a>
+        <div class="toggle_btn"><i class="fa fa-bars"></i></div>
+      </div>
+
+      <div class="dropdown_menu">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/view/sobre.html">Sobre</a></li>
+        <li><a href="/view/services.html">Serviços</a></li>
+        <li><a href="/view/contact.html">Contato</a></li>
+        <li><a href="#" class="action_btn">Iniciar</a></li>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+      <div class="form-box login">
+        <h2> Login </h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" required>
+            <label> Email </label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input type="password" required>
+            <label> Password </label>
+          </div>
+          <div class="remember-forgot">
+            <label><input type="checkbox"> Lembrar-me </label>
+            <a href="#"> Esqueceu a senha? </a>
+          </div>
+          <button type="submit" class="btn"> Login </button>
+          <div class="login-register">
+            <p> Deseja criar uma conta? <a href="#" class="register-link"> Registrar </a></p>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-box register">
+        <h2> Registre-se </h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="person"></ion-icon></span>
+            <input type="text" required>
+            <label> Nome </label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" required>
+            <label> Email </label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input type="password" required>
+            <label> Password </label>
+          </div>
+          <div class="remember-forgot">
+            <label><input type="checkbox">Eu aceito os termos e Condições</label>
+            <a href="#"></a>
+          </div>
+          <button type="submit" class="btn"> Registrar </button>
+          <div class="login-register">
+            <p> Tenho uma conta registrada. <a href="#" class="login-link"> Login </a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+   
+    <script src="/js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  </body>
+</html>
