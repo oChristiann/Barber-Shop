@@ -2,63 +2,105 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title> Projeto Christian </title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Estilo para versão mobile */
+    @media screen and (max-width: 600px) {
+      .logo a {
+        font-size: 1.5rem;
+      }
+
+      .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar .links li {
+        margin: 10px 0;
+      }
+
+      .navbar .btn-popup {
+        display: none;
+      }
+
+      .dropdown_menu {
+        display: none;
+      }
+
+      .toggle_btn {
+        display: block;
+      }
+
+      /* Estilos adicionais para o dropdown_menu */
+      .dropdown_menu.open {
+        display: block;
+      }
+    }
+  </style>
+  <title>Projeto Christian</title>
 </head>
 
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logo"><a href="/index.html" style="color:orangered">BarberShop<ion-icon name="cut-outline" style="color:rgb(64, 75, 121)"></ion-icon></a></div>
-            <ul class="links">
-              <li><a href="/index.html">Home</a></li>
-              <li><a href="/view/sobre.html">Sobre</a></li>
-              <li><a href="/view/services.html">Serviços</a></li>
-              <li><a href="/view/contact.html">Contato</a></li>
-            </ul>
-    
-            <a href="/view/login.html" class="btn-popup">Login</a>
-            <div class="toggle_btn"><i class="fa fa-bars"></i></div>
-          </div>
+  <header>
+    <div class="navbar">
+      <div class="logo"><a href="/index.html" style="color:orangered">BarberShop<ion-icon name="cut-outline"
+            style="color:rgb(64, 75, 121)"></ion-icon></a></div>
+      <ul class="links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/view/sobre.html">Sobre</a></li>
+        <li><a href="/view/services.html">Serviços</a></li>
+        <li><a href="/view/contact.html">Contato</a></li>
+      </ul>
 
-        <div class="dropdown_menu">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/view/sobre.html">Sobre</a></li>
-            <li><a href="/view/services.html">Serviços</a></li>
-            <li><a href="/view/contact.html">Contato</a></li>
-            <li><a href="#" class="action_btn">Iniciar</a></li>
-        </div>
-    </header>
+      <a href="/view/login.html" class="btn-popup">Login</a>
+      <div class="toggle_btn"><i class="fa fa-bars"></i></div>
+    </div>
 
-    <main>
-        <section id="hero">
-            <h1 style="color:rgb(252, 67, 0);font-weight: 600">Sejam Bem vindos!!</h1>
-            <p style="color:orangered;font-weight: 600">Estilo Autêntico</p>
-        </section>
-    </main>
+    <div class="dropdown_menu">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/view/sobre.html">Sobre</a></li>
+        <li><a href="/view/services.html">Serviços</a></li>
+        <li><a href="/view/contact.html">Contato</a></li>
+        <li><a href="#" class="action_btn">Iniciar</a></li>
+      </ul>
+    </div>
+  </header>
 
-    <script>
-        const toggleBtn = document.querySelector('.toggle_btn')
-        const toggleBtnIcon = document.querySelector('.toggle_btn i')
-        const dropDownMenu = document.querySelector('.dropdown_menu')
+  <main>
+    <section id="hero">
+      <h1 style="color:rgb(252, 67, 0);font-weight: 600">Sejam Bem vindos!!</h1>
+      <p style="color:orangered;font-weight: 600">Estilo Autêntico</p>
+    </section>
+  </main>
 
-        toggleBtn.onclick = function () {
-            dropDownMenu.classList.toggle('open')
-            const isOpen = dropDownMenu.classList.contains('open')
-            toggleBtnIcon.classList = isOpen
-                ? 'fa fa-times'
-                : 'fa fa-bars'
-        }
-    </script>
+  <script src="/js/script.js"></script>
+  <script type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const toggleBtnIcon = document.querySelector('.toggle_btn i');
+    const dropDownMenu = document.querySelector('.dropdown_menu');
+
+    toggleBtn.onclick = function () {
+      dropDownMenu.classList.toggle('open');
+      const isOpen = dropDownMenu.classList.contains('open');
+      toggleBtnIcon.classList = isOpen ? 'fa fa-times' : 'fa fa-bars';
+    };
+  </script>
+
 </body>
 
 </html>
