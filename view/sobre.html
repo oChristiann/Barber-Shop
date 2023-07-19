@@ -1,77 +1,175 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/sobre.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Projeto Christian</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/sobre.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet" />
+  <style>
+    .carousel-item img {
+      border: 6px solid orangered;
+      border-radius: 6px;
+      object-fit: cover;
+      height: 350px;
+    }
 
-  <body>
-    <header>
-      <div class="navbar">
-        <div class="logo"><a href="/index.html" style="color:orangered">BarberShop<ion-icon name="cut-outline"
-              style="color:rgb(64, 75, 121)"></ion-icon></a></div>
-        <ul class="links">
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/view/sobre.html">Sobre</a></li>
-          <li><a href="/view/services.html">Serviços</a></li>
-          <li><a href="/view/contact.html">Contato</a></li>
-        </ul>
+    /* Estilos para a barra de navegação */
+    .navbar {
+      background-color: transparent;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+    }
 
-        <a href="/view/login.html" class="btn-popup">Login</a>
-        <div class="toggle_btn"><i class="fa fa-bars"></i></div>
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: orangered;
+    }
+
+    /* Estilos para os botões de avançar e retornar */
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 40px;
+      height: 40px;
+      background-color: orangered;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    .carousel-control-prev {
+      left: -50px;
+    }
+
+    .carousel-control-next {
+      right: -50px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: invert(1) brightness(75%) sepia(100) hue-rotate(180deg);
+    }
+
+    /* Estilos para os indicadores do carrossel */
+    #carouselExampleIndicators ol.carousel-indicators li {
+      background-color: orangered;
+    }
+
+    /* Estilos personalizados para centralizar verticalmente o carrossel */
+    .carousel-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+
+  <title>Projeto Christian</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="/index.html" style="color: orangered">
+          BarberShop<ion-icon name="cut-outline" style="color: rgb(64, 75, 121)"></ion-icon>
+        </a>
       </div>
+      <ul class="links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/view/sobre.html">Sobre</a></li>
+        <li><a href="/view/services.html">Serviços</a></li>
+        <li><a href="/view/contact.html">Contato</a></li>
+      </ul>
+      <a href="/view/login.html" class="btn-popup">Login</a>
+      <div class="toggle_btn"><i class="fa fa-bars"></i></div>
+    </nav>
 
-      <div class="dropdown_menu">
+    <div class="dropdown_menu">
+      <ul>
         <li><a href="/index.html">Home</a></li>
         <li><a href="/view/sobre.html">Sobre</a></li>
         <li><a href="/view/services.html">Serviços</a></li>
         <li><a href="/view/contact.html">Contato</a></li>
         <li><a href="#" class="action_btn">Iniciar</a></li>
-      </div>
-    </header>
+      </ul>
+    </div>
+  </header>
 
-    <main>
-      <div class="container">
-        <div class="estatico" style="color:orangered"> BarberShop </div>
-        <ul class="dinamico">
-          <li><span> Seu corte não fica como deseja? </span></li>
-          <li><span> Viemos para resolver seu problema. </span></li>
-          <li><span> Nossos profissionais são treinados. </span></li>
-          <li><span> Agende seu horário </span></li>
-        </ul>
-      </div>
-
-    </main>
-
-    <script src="/js/script.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-    <script>
-      const toggleBtn = document.querySelector('.toggle_btn')
-      const toggleBtnIcon = document.querySelector('.toggle_btn i')
-      const dropDownMenu = document.querySelector('.dropdown_menu')
-
-      toggleBtn.onclick = function () {
-        dropDownMenu.classList.toggle('open')
-        const isOpen = dropDownMenu.classList.contains('open')
-        toggleBtnIcon.classList = isOpen
-          ? 'fa fa-times'
-          : 'fa fa-bars'
+  <main>
+    <style>
+      .carousel-image {
+        max-width: 75%;
+        /* Defina o valor desejado para diminuir a largura das imagens */
+        margin: 0 auto;
+        /* Centralize as imagens horizontalmente */
       }
-    </script>
+    </style>
 
-  </body>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/img/Carrossel_01.jpg" class="d-block w-100 carousel-image" alt="Imagem 1" />
+        </div>
+        <div class="carousel-item">
+          <img src="/img/Carrossel_02.jpg" class="d-block w-100 carousel-image" alt="Imagem 2" />
+        </div>
+        <div class="carousel-item">
+          <img src="/img/Carrossel_03.jpg" class="d-block w-100 carousel-image" alt="Imagem 3" />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="estatico" style="color: orangered; text-align: center;"> Simplicidade no detalhe </div>
+      <ul class="dinamico" style="text-align: center; margin-top: 20px;">
+        <li> Agende seu Horário! </li>
+        <li> Satisfação Garantida </li>
+        <li> Profissionais Treinados </li>
+        <li> Qualidade e excelência </li>
+        <li> Agende seu Horário! </li>
+      </ul>
+    </div>
+  </main>
+
+  <script src="/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const toggleBtnIcon = document.querySelector('.toggle_btn i');
+    const dropDownMenu = document.querySelector('.dropdown_menu');
+
+    toggleBtn.onclick = function () {
+      dropDownMenu.classList.toggle('open');
+      const isOpen = dropDownMenu.classList.contains('open');
+      toggleBtnIcon.classList = isOpen ? 'fa fa-times' : 'fa fa-bars';
+    };
+  </script>
+</body>
 
 </html>

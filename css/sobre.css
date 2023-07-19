@@ -553,19 +553,4 @@ section#hero {
         width: unset;
     }
 
-
 }
-
-@media screen and (max-width: 600px) {
-    .container {
-      text-align: center;
-    }
-
-    .estatico {
-      font-size: 1.5rem;
-    }
-
-    .dinamico li {
-      margin-bottom: 10px;
-    }
-  }

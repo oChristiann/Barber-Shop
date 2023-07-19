@@ -7,7 +7,7 @@
 
 body {
     background-color: #000;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 85%), url('/img/02.jpg');
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 95%), url('/img/02.png');
     background-size: cover;
     background-position: center;
     display: flex;
